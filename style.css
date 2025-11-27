@@ -1,0 +1,253 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #f39c12;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    width: 100%;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+#about {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 20px;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item h3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.portfolio-item a {
+    display: inline-block;
+    font-weight: 700;
+    color: #f39c12;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover,
+.portfolio-item a:focus {
+    color: #d35400;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer#contact {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1rem;
+}
+
+footer#contact h2 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+footer#contact p {
+    color: yellowgreen;
+    margin: 5px 0;
+}
+
+footer#contact a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer#contact a:hover,
+footer#contact a:focus {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    section {
+        padding: 0 1rem;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .portfolio-item {
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode footer#contact {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #f39c12;
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+    color: #d35400;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: #f39c12;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #222;
+    transition: background-color 0.3s ease;
+    margin-left: 1rem;
+}
+
+#dark-mode-toggle:hover {
+    background: #d35400;
+}
